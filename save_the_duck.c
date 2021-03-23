@@ -1,3 +1,4 @@
+//Save The Duck Project it's just starting, please stay cool and wait for news soon...
 #include <stdio.h>
 
 int main ()
