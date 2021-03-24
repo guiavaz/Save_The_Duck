@@ -22,8 +22,8 @@ int consequencia (int a)
 
 int main ()
 {
-	char ch;
-	int c,escolha;
+	char ch,escolha;
+	int c;
 	char name[20],duckname[20],ducklastname[20];
 	vida=6;
 	printf("Welcome to Save The Duck.\n\nQuack! Quack!\n\n");
@@ -51,12 +51,21 @@ int main ()
 	}
 	
 	printf("Let's start the Game, please enter your first name:\n");
-	scanf("%s",name);
-	printf("Welcome %s,the Duck's Life it's in your hands.\nYou can start choosing a new name to the Duck.\n",name);
+	scanf("%s",&name[0]);
+	printf("\nWelcome %s,the Duck's Life it's in your hands.\nYou can start choosing a new name to the Duck.\n",name);
 	printf("Please enter the Duck's first name:\n");
-	scanf("%s",duckname);
+	scanf("%s",&duckname[0]);
 	printf("Please enter the Duck Last Name:\n");
-	scanf("%s",ducklastname);
+	scanf("%s",&ducklastname[0]);
 	
-	printf("Great, %s %s it's a strange name for a duck, but he loved it!\n",duckname,ducklastname);
+	printf("\nGreat, %s %s it's a strange name for a duck, but he loved it!\n",duckname,ducklastname);
+	printf("\n%s feel happy to be with you... You're his bestfriend!\nYou're %s only friend...\n\n",duckname,duckname);
+	printf("Hey %s do you want to play with %s?\n",name,duckname);
+	printf("\n*****Instructions:****\n*****To choose what you want to do type the matching letter and press Enter to continue*****\n\n");
+	printf("A. Play card games with %s\nB. Play hide and seek with %s\nC. I don't wanna play\n",duckname,duckname);
+		
+	scanf(" %c",&escolha); //lembrar de adicionar espaço antes do %c ao usar scanf
+	printf("%c\n",escolha);
+
+
 }
